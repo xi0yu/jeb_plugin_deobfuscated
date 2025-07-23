@@ -47,3 +47,16 @@ toString优化效果
     JEB 安装目录/coreplugins/
 
 3. 重启 JEB，插件将自动加载并在分析过程中运行。
+4. 打开一个Apk文件，点击 Files -> Plugins -> Execute an Engines Plugin -> Code Symbol Deobfuscated Plugin
+
+![效果截图](assets/main_options.png)
+
+实验性开关：
+是用来控制 ToString 优化模式的开关。
+传统模式：使用正常的指令匹配机制匹配 toString 方法中的指令，效果良好。
+传统模式缺陷：由于采用的固定指令匹配机制，在遇到非正常模板的指令后无法正常识别出字段原本的符号！
+
+实验性功能：基于寄存器记忆机制，采用实时跟踪寄存器的变化来寻找真实字段的符号，效果优于传统模式，但是有可能有意想不到的问题。
+
+Aidl / Enum / ToString 还原对应三个优化功能开关，如果关闭则不会进行相应的优化。
+
