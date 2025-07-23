@@ -1,4 +1,4 @@
-# JEB Plugin - Deobfuscated Helper
+# JEB Plugin - Deobfuscated
 
 这是一个为 [JEB Decompiler](https://www.pnfsoftware.com/jeb/) 开发的插件，是一个为 JEB 反编译器设计的 Java 插件，旨在辅助逆向工程人员在分析混淆或重命名的 APK/Dex 文件时，提高代码可读性和分析效率。该插件通过自动提取关键上下文信息、还原类/方法/字段名称、识别特征模式，帮助用户在 JEB GUI 中更直观地理解目标代码结构。
 
@@ -7,9 +7,9 @@
 ## 🔧 功能介绍
 
 - 自动识别并还原常见字段、方法、类的语义名称
-- 支持基于 toString、反射调用、Protobuf 描述符恢复字段符号
-- 可识别 Kotlin Metadata 并提取原始结构
-- 可扩展的插件框架，适配更多规则逻辑
+- 加入批量恢复 Protobuf 符号, 加入 Parcelable 源文件还原【研发中】
+- 可识别 Kotlin Metadata 并提取原始结构 【后期计划加入】
+- 可扩展的插件框架，适配更多规则逻辑【后期计划加入】
 
 ## 🖼️ 插件效果
 
